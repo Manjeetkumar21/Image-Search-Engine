@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #31304D;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+p{
+    margin-block: 20px;
+    color: aliceblue;
+
+}
+
+
+form{
+    position: relative;
+    width: 500px;
+    height: 50px;
+    /* background-color: #131524; */
+    border-radius: 5px;
+}
+
+#search-input{
+    position: absolute;
+    left: 0px;
+    height: 50px;
+    width: 400px;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    color: #131524;
+
+}
+
+.search{
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    background-color: #161A30;
+    color: white;
+    font-size: 1.1rem;
+}
+
+::placeholder{
+    color: #131524;
+    font-size: 0.9rem;
+}
+
+#show-more{
+    height: 50px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #161A30;
+    color: white;
+    font-size: 1.1rem;
+    margin: 20px 0px 100px;
+    display: none;
+    transition: 0.2s ease-in;
+    outline: 2px solid #161A30;
+}
+
+#show-more:active{
+    scale: 0.8;
+}
+
+.search:hover, #show-more:hover{
+    background-color: #131524;
+    outline-offset: 3px;
+}
+
+/* Images */
+
+#search-result{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px auto 50px;
+}
+
+#search-result img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.2s ease-in;
+}
+
+#search-result img:hover{
+    scale: 1.1;
+}
+
+@media screen and (width < 480px){
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    #search-input{
+        width: 80%;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .search{
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+
+    #search-result{
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    #search-result img{
+        height: 150px;
+        
+    }
+
+    #show-more{
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
